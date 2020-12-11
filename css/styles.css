@@ -156,7 +156,6 @@ span {
   padding: 5rem 0;
 }
 
-
 /*
 =============== 
 Navbar
@@ -357,7 +356,6 @@ Featured Tours
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 .picture {
   position: relative;
 }
@@ -387,7 +385,8 @@ Featured Tours
   justify-content: center;
 }
 #tours .btn {
-  padding: 1rem 1.2rem;
+  background-color: var(--clr-primary-8);
+  color: #000;
   position: absolute;
   bottom: 0;
   right: 0;
