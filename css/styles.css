@@ -384,7 +384,7 @@ Featured Tours
   display: flex;
   justify-content: center;
 }
-#tours .btn {
+.picture>.btn {
   background-color: var(--clr-primary-8);
   box-shadow: none;
   color: #000;
