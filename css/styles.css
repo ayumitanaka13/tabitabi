@@ -386,6 +386,7 @@ Featured Tours
 }
 #tours .btn {
   background-color: var(--clr-primary-8);
+  box-shadow: none;
   color: #000;
   position: absolute;
   bottom: 0;
