@@ -3,14 +3,13 @@
 Fonts
 ===============
 */
-@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
 
 /*
 =============== 
 Variables
 ===============
 */
-
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: #044e53;
@@ -45,12 +44,12 @@ Variables
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
 /*
 =============== 
 Global Styles
 ===============
 */
-
 * {
   margin: 0;
   padding: 0;
@@ -77,7 +76,6 @@ img {
   width: 100%;
   display: block;
 } */
-
 h1,
 h2,
 h3,
@@ -88,8 +86,8 @@ h4 {
   margin-bottom: 0.75rem;
 }
 h1 {
+  color: var(--clr-white);
   font-size: 6rem;
-  color: #fff;
 }
 h2 {
   font-size: 2rem;
@@ -132,8 +130,8 @@ span {
     line-height: 1;
   }
 }
-/*  global classes */
 
+/*  global classes */
 .btn {
   text-transform: uppercase;
   background: var(--clr-primary-5);
@@ -264,6 +262,7 @@ Navbar
     color: var(--clr-primary-8);
   }
 }
+
 /*
 =============== 
 Hero
@@ -272,27 +271,30 @@ Hero
 #hero {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("/m-0920-html-css-tabitabi-starter/images/main.jpeg");
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 #hero p {
-  color: #fff;
-  letter-spacing: 0.6rem;
   margin: 2rem 0;
+  letter-spacing: 0.3rem;
+  color: var(--clr-white);
 }
 
 #hero .btn {
+  font-size: large;
+  padding: 1.2rem 2rem;
   color: var(--clr-primary-5);
-  background-color: #fff;
-  padding: 1.6rem 2rem;
+  background-color: var(--clr-white);
 }
+
 /*
 =============== 
 About
@@ -315,7 +317,7 @@ About
   padding-right: 2rem;
 }
 #about .btn {
-  padding: 1rem 1.2rem;
+  padding: 0.6rem 1rem;
 }
 
 /*
@@ -336,11 +338,15 @@ Services
   display: flex;
 }
 .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   font-size: 3rem;
+  margin-right: 1rem;
+  padding: 1.6rem 1rem;
   color: var(--clr-primary-1);
   background-color: var(--clr-primary-5);
-  padding: 1rem;
-  margin-right: 2rem;
 }
 
 /*
@@ -356,15 +362,26 @@ Featured Tours
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.card {
+  width: 30%;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+  background-color: var(--clr-grey-10);
+  box-shadow: 1px 5px 10px var(--clr-grey-9);
+}
 .picture {
   position: relative;
 }
-.card {
-  width: 30%;
-  box-shadow: 1px 5px 10px lightgray;
-  background-color: var(--clr-grey-10);
-  border-radius: 10px;
-  margin-bottom: 3rem;
+.picture>.btn {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+
+  box-shadow: none;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  color: var(--clr-primary-1);
+  background-color: var(--clr-primary-8);
 }
 .text {
   padding: 2rem 1rem;
@@ -374,7 +391,7 @@ Featured Tours
 }
 .detail {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   color: var(--clr-primary-5);
 }
 .detail i {
@@ -384,13 +401,8 @@ Featured Tours
   display: flex;
   justify-content: center;
 }
-.picture>.btn {
-  background-color: var(--clr-primary-8);
-  box-shadow: none;
-  color: #000;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.all-tours>.btn {
+  padding: 0.6rem 1rem;
 }
 
 /*
@@ -400,25 +412,30 @@ Contact
 */
 #contact {
   display: flex;
+  justify-content: space-between;
+
   padding: 6rem 3rem;
   background-color: var(--clr-primary-5);
-  justify-content: space-between;
 }
 #contact h3 {
-  color: #fff;
+  color: var(--clr-white);
+}
+#contact p {
+  color: var(--clr-primary-8);
 }
 form {
   width: 50%;
 }
 input {
-  border: none;
   width: 80%;
   padding: 1rem 0; 
+  border: none;
 }
 #contact .btn {
   margin-left: 0.6rem;
   padding: 1rem 1.2rem;
-  color: #000;
+  text-transform: capitalize;
+  color: var(--clr-primary-1);
   background-color: var(--clr-primary-8);
 }
 
@@ -434,6 +451,7 @@ Gallery
 #gallery img {
   width: 25%;
 }
+
 /*
 =============== 
 Footer
@@ -441,21 +459,21 @@ Footer
 */
 footer {
   padding: 6rem 0;
-  background-color: var(--clr-grey-1);
   text-align: center;
-  color: #fff; 
+  color: var(--clr-white);
+  background-color: var(--clr-grey-1);
 }
 .footer-nav {
   display: flex;
   justify-content: center;
 }
 .footer-nav a {
-  color: #fff;
+  color: var(--clr-white);
 }
 .social {
   margin: 2rem 0;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .fa-facebook {
-  margin-left: 0.6rem;
+  margin-right: 0.6rem;
 }
